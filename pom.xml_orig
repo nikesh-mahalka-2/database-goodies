@@ -41,14 +41,12 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>${env.MAVEN_ID}</id>
-      <name>Snapshot</name>
-      <url>http://${env.MAVEN_HOST}:${env.MAVEN_PORT}/repository/maven-snapshots</url>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
     <repository>
-      <id>${env.MAVEN_ID}</id>
-      <name>Releases</name>
-      <url>http://${env.MAVEN_HOST}:${env.MAVEN_PORT}/repository/maven-releases</url>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
 
@@ -417,11 +415,11 @@
     </profile>
 
     <profile>
-      <id>${env.MAVEN_ID}</id>
+      <id>packagecloud</id>
       <repositories>
         <repository>
-          <id>${env.MAVEN_ID}</id>
-          <url>http://${env.MAVEN_HOST}:${env.MAVEN_PORT}/repository/maven-releases/maven2</url>
+          <id>packagecloud</id>
+          <url>https://packagecloud.io/garricko/travis/maven2</url>
           <snapshots>
             <enabled>true</enabled>
             <updatePolicy>always</updatePolicy>
@@ -430,14 +428,12 @@
       </repositories>
       <distributionManagement>
         <snapshotRepository>
-          <id>${env.MAVEN_ID}</id>
-          <name>Snapshot</name>
-          <url>http://${env.MAVEN_HOST}:${env.MAVEN_PORT}/repository/maven-snapshots</url>
+          <id>packagecloud</id>
+          <url>packagecloud+https://packagecloud.io/garricko/travis</url>
         </snapshotRepository>
         <repository>
-          <id>nexus</id>
-          <name>Releases</name>
-          <url>http://${env.MAVEN_HOST}:${env.MAVEN_PORT}/repository/maven-releases</url>
+          <id>packagecloud</id>
+          <url>packagecloud+https://packagecloud.io/garricko/travis</url>
         </repository>
       </distributionManagement>
     </profile>

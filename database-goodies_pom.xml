@@ -11,45 +11,23 @@
   <description>Useful things built on top of the database library.</description>
   <url>https://github.com/susom/database-goodies</url>
 
-  <licenses>
-    <license>
-      <name>The Apache Software License, Version 2.0</name>
-      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-    </license>
-  </licenses>
-
-  <developers>
-    <developer>
-      <name>Garrick Olson</name>
-      <email>garricko@stanford.edu</email>
-      <organization>Stanford Medicine</organization>
-      <organizationUrl>https://med.stanford.edu</organizationUrl>
-    </developer>
-  </developers>
-
-  <scm>
-    <connection>scm:git:https://github.com/susom/database-goodies.git</connection>
-    <developerConnection>scm:git:https://github.com/susom/database-goodies.git</developerConnection>
-    <url>https://github.com/susom/database-goodies</url>
-    <tag>HEAD</tag>
-  </scm>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
 
+
   <distributionManagement>
-    <snapshotRepository>
-      <id>${env.MAVEN_ID}</id>
-      <name>Snapshot</name>
-      <url>http://${env.MAVEN_HOST}:${env.MAVEN_PORT}/repository/maven-snapshots</url>
-    </snapshotRepository>
     <repository>
-      <id>${env.MAVEN_ID}</id>
+      <id>nexus</id>
       <name>Releases</name>
-      <url>http://${env.MAVEN_HOST}:${env.MAVEN_PORT}/repository/maven-releases</url>
+      <url>http://35.188.213.68:8081/repository/maven-releases</url>
     </repository>
+    <snapshotRepository>
+      <id>nexus</id>
+      <name>Snapshot</name>
+      <url>http://35.188.213.68:8081/repository/maven-snapshots</url>
+    </snapshotRepository>
   </distributionManagement>
 
   <build>
@@ -417,29 +395,31 @@
     </profile>
 
     <profile>
-      <id>${env.MAVEN_ID}</id>
+      <id>nexus</id>
       <repositories>
         <repository>
-          <id>${env.MAVEN_ID}</id>
-          <url>http://${env.MAVEN_HOST}:${env.MAVEN_PORT}/repository/maven-releases/maven2</url>
+          <id>nexus</id>
+          <url>http://35.188.213.68:8081/repository/maven-releases/maven2</url>
           <snapshots>
             <enabled>true</enabled>
             <updatePolicy>always</updatePolicy>
           </snapshots>
         </repository>
       </repositories>
+
       <distributionManagement>
-        <snapshotRepository>
-          <id>${env.MAVEN_ID}</id>
-          <name>Snapshot</name>
-          <url>http://${env.MAVEN_HOST}:${env.MAVEN_PORT}/repository/maven-snapshots</url>
-        </snapshotRepository>
         <repository>
           <id>nexus</id>
           <name>Releases</name>
-          <url>http://${env.MAVEN_HOST}:${env.MAVEN_PORT}/repository/maven-releases</url>
+          <url>http://35.188.213.68:8081/repository/maven-releases</url>
         </repository>
+        <snapshotRepository>
+          <id>nexus</id>
+          <name>Snapshot</name>
+          <url>http://35.188.213.68:8081/repository/maven-snapshots</url>
+        </snapshotRepository>
       </distributionManagement>
+
     </profile>
 
     <profile>
