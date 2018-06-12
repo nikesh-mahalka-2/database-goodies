@@ -9,7 +9,8 @@ before_script:
 # Skip the default mvn command because we want to set the profile explicitly
 install: true
 script:
-  - mvn -DskipTests -P packagecloud clean package
+  # - mvn -DskipTests -P packagecloud clean package -> pass
+   - mvn -DskipTests -P oracle12 clean package
   # - mvn -DskipTests -P postgresql clean package  -> 
   # [ERROR] Failed to execute goal on project database-goodies: 
   # Could not resolve dependencies for project com.github.susom:database-goodies:jar:1.1-SNAPSHOT:
