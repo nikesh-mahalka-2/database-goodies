@@ -5,7 +5,7 @@
       <active>true</active>
       <protocol>http</protocol>
       <host>${env.PROXY_HOST}</host>
-      <port>${env.PROXY_PORT}</port>
+      <port>3128</port>
       <username>${env.PROXY_USERNAME}</username>
       <password>${env.PROXY_PASSWORD}</password>
     </proxy>

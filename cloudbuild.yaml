@@ -15,9 +15,9 @@
 secrets:
 - kmsKeyName: 'projects/spinnaker-poc-200412/locations/global/keyRings/source-clear-encryption/cryptoKeys/source-clear-encryption'
   secretEnv:
-    SRCCLR_API_TOKEN: CiQAxgges9eJ3Ae+K0ncF0O/Mb5dtAu/2ZBxHBHuBxwBQ0bjI14SyQMAnnQB+oQeOtj+xlIMzYOy7gYjHz+NNEvXbCkD4rru22WxriP5uD2By/GAyfh7zayMmQrPGfMpEiIv3D4RvEETYvvctUctG7p52axoSBmndCbe8FYyAgOZL7xcTf4XuHijtvYWLDKoKM7CggANss0hKRmvKnSCfYRRffE18bzIcYygCnx0QdlfF6WXJZZxIxP4CuklJkaU0CiQzYUKrY5OsNxnue/YiWkaexaPkZhnwpC/xGMzOfUNSMFhe70Zqas7ZGR8pzEPaRy1C//qoVsOkqKyxBCqW+LfFLPVic/UlmnKo0lWySDGhvY1XzNQeU8u2hE05zggg0xjCi7q5mw5XcuutcktGx2AMtT7gZplwHBz6sOIn/4gP+7SzuQtmjRHxBwAgMXcqKhYSPy2COC6Vq1ODb0otpdLc09Tqd+1FAOKOLRQ6rPKDKPqviUEgemaaTQWMrcdBNP2YbqgK8U2RXL2uc2/49bU3TpjFbAonzMD9gaCvMw/d3CK3yDDu44NTZEiuldO3R01CwbbkAz5gp7MYUtMBHAeATKvhPFW1dSv9EJML0+j7ldROVYuXbOx6UO3xy87dyDg7e50C3i8UQkpsZ8PgTuX
-    DOCKER_USERNAME: CiQAxgges/+3suiMjp5sutEQ+IwPYWzdSO7U0r1lMj64oyQAzMASMgCedAH6qAy7p6/EHl7MhcYFJDEB5Ve+uJUpvIBU+VB0prvuiy70/l2xLZi8igs4JW+y
-    DOCKER_PASSWORD: CiQAxgges7DOxqkgtgOuOMALZgIaa9f1JiSno67g6Lol98O5nocSNACedAH6lqExDVBta0bn8WLD+XqAwhLapJxt4mMxzm6waV8t3js8eSV2PswjVb8DDNWWGxE=
+    #SRCCLR_API_TOKEN: CiQAxgges9eJ3Ae+K0ncF0O/Mb5dtAu/2ZBxHBHuBxwBQ0bjI14SyQMAnnQB+oQeOtj+xlIMzYOy7gYjHz+NNEvXbCkD4rru22WxriP5uD2By/GAyfh7zayMmQrPGfMpEiIv3D4RvEETYvvctUctG7p52axoSBmndCbe8FYyAgOZL7xcTf4XuHijtvYWLDKoKM7CggANss0hKRmvKnSCfYRRffE18bzIcYygCnx0QdlfF6WXJZZxIxP4CuklJkaU0CiQzYUKrY5OsNxnue/YiWkaexaPkZhnwpC/xGMzOfUNSMFhe70Zqas7ZGR8pzEPaRy1C//qoVsOkqKyxBCqW+LfFLPVic/UlmnKo0lWySDGhvY1XzNQeU8u2hE05zggg0xjCi7q5mw5XcuutcktGx2AMtT7gZplwHBz6sOIn/4gP+7SzuQtmjRHxBwAgMXcqKhYSPy2COC6Vq1ODb0otpdLc09Tqd+1FAOKOLRQ6rPKDKPqviUEgemaaTQWMrcdBNP2YbqgK8U2RXL2uc2/49bU3TpjFbAonzMD9gaCvMw/d3CK3yDDu44NTZEiuldO3R01CwbbkAz5gp7MYUtMBHAeATKvhPFW1dSv9EJML0+j7ldROVYuXbOx6UO3xy87dyDg7e50C3i8UQkpsZ8PgTuX
+#    DOCKER_USERNAME: CiQAxgges/+3suiMjp5sutEQ+IwPYWzdSO7U0r1lMj64oyQAzMASMgCedAH6qAy7p6/EHl7MhcYFJDEB5Ve+uJUpvIBU+VB0prvuiy70/l2xLZi8igs4JW+y
+#    DOCKER_PASSWORD: CiQAxgges7DOxqkgtgOuOMALZgIaa9f1JiSno67g6Lol98O5nocSNACedAH6lqExDVBta0bn8WLD+XqAwhLapJxt4mMxzm6waV8t3js8eSV2PswjVb8DDNWWGxE=
     PROXY_USERNAME: CiQAxgges/095KkTUKqhhAktTWIcdkODDDqn56yE+FLckQZJYNISLwCedAH6m5owKRoekFrz0qmsSl0tZsUC6pQU2PP+yp9OA2LFacD98nSH/1c67+9w
     PROXY_PASSWORD: CiQAxgges/NJU+AQ9K2ivVCtaQMhQ5rq4alE3rl4bD5HM6SFjXISMgCedAH6F9wSOWGbOuiMP0E99cu4DhTSFLaAL9Zl185JmLhkiFBO9z3kx5aceReEfaMB
     MAVEN_USERNAME: CiQAxgges5JcveOrBFMl2nCfPSh/CSMNGcQ0ezfdVonTswa9bv4SLgCedAH6TTHRFMVhslXtJBSo0gjfyzns33ZKFfaXnT9XVXGnjhe2cxg8yHoxvBM=
@@ -30,19 +30,19 @@ steps:
 #
 
 # Copying ojdbc7 dependency in GCB workspace
-- name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', 'gs://delete-oracle-jdbc-jar/ojdbc7.jar', 'ojdbc7.jar']
+#- name: 'gcr.io/cloud-builders/gsutil'
+#  args: ['cp', 'gs://delete-oracle-jdbc-jar/ojdbc7.jar', 'ojdbc7.jar']
 
-# Copying customized build files
-- name: 'gcr.io/cloud-builders/docker'
-  entrypoint: 'bash'
-  args: ['-c', "cp /workspace/oracle_pom.xml /workspace/pom.xml"]
+## Copying customized build files
+#- name: 'gcr.io/cloud-builders/docker'
+#  entrypoint: 'bash'
+#  args: ['-c', "cp /workspace/oracle_pom.xml /workspace/pom.xml"]
 
 # Authenticating to Docker Store
-- name: 'gcr.io/cloud-builders/docker'
-  entrypoint: 'bash'
-  args: ['-c', 'docker login --username=$$DOCKER_USERNAME --password=$$DOCKER_PASSWORD']
-  secretEnv: ['DOCKER_USERNAME', 'DOCKER_PASSWORD']
+#- name: 'gcr.io/cloud-builders/docker'
+#  entrypoint: 'bash'
+#  args: ['-c', 'docker login --username=$$DOCKER_USERNAME --password=$$DOCKER_PASSWORD']
+#  secretEnv: ['DOCKER_USERNAME', 'DOCKER_PASSWORD']
 
 # Creating a separate network
 # It is required for communication between Oracle DB server and APP server
@@ -51,25 +51,29 @@ steps:
   args: ['-c', 'docker network create $$ORACLEDB_NET']
   env: ['ORACLEDB_NET=stanford-oracledb']
 
-# Creating an Oracle DB server 
-- name: 'gcr.io/cloud-builders/docker'
-  entrypoint: 'bash'
-  args: ['-c', "docker run -d --name $$ORACLEDB_SERVER --net $$ORACLEDB_NET \
-         -v /workspace:/workspace $$ORACLEDB_IMAGE"]
-  env: ['ORACLEDB_IMAGE=store/oracle/database-enterprise:12.2.0.1-slim', 'ORACLEDB_SERVER=oracle-dbserver',
-        'ORACLEDB_NET=stanford-oracledb']
+## Creating an Oracle DB server 
+#- name: 'gcr.io/cloud-builders/docker'
+#  entrypoint: 'bash'
+#  args: ['-c', "docker run -d --name $$ORACLEDB_SERVER --net $$ORACLEDB_NET \
+#         -v /workspace:/workspace $$ORACLEDB_IMAGE"]
+#  env: ['ORACLEDB_IMAGE=store/oracle/database-enterprise:12.2.0.1-slim', 'ORACLEDB_SERVER=oracle-dbserver',
+#        'ORACLEDB_NET=stanford-oracledb']
 
 # Building application jar using APP build server
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
-  args: ['-c', "docker run --name $$APP_BUILD_SERVER --net $$ORACLEDB_NET\
-         -e PROXY_USERNAME -e PROXY_PASSWORD -e MAVEN_USERNAME -e MAVEN_PASSWORD \
-         -e MAVEN_ID -e PROXY_HOST -e PROXY_PORT -e MAVEN_HOST -e MAVEN_PORT \
-         -v /workspace:/workspace --entrypoint 'bash' $$APP_BUILD_IMAGE \
-         -c 'cd /workspace; cp settings.xml ~/.m2/settings.xml; mvn -Poracle12 -e -DskipTests clean package'"]
+  args: ['-c', "docker run -e PROXY_USERNAME -e PROXY_PASSWORD -e MAVEN_USERNAME -e MAVEN_PASSWORD \
+         -e MAVEN_ID -e PROXY_HOST -e MAVEN_HOST -e MAVEN_PORT \
+         --name $$APP_BUILD_SERVER --net $$ORACLEDB_NET -v /workspace:/workspace --entrypoint 'bash' $$APP_BUILD_IMAGE \
+         -c 'cd /workspace; cp settings.xml ~/.m2/settings.xml; ./run_oracle.test.sh'"]
   env: ['APP_BUILD_SERVER=oracledb-app-build-server', 'ORACLEDB_NET=stanford-oracledb',
-        'APP_BUILD_IMAGE=gcr.io/cloud-builders/mvn', 'MAVEN_ID=nexus', 'PROXY_HOST=35.192.231.147', 'PROXY_PORT=3128',
+        'APP_BUILD_IMAGE=gcr.io/cloud-builders/mvn', 'MAVEN_ID=nexus', 'PROXY_HOST=35.188.128.80',
         'MAVEN_HOST=35.188.213.68', 'MAVEN_PORT=8081']
   secretEnv: ['PROXY_USERNAME', 'PROXY_PASSWORD', 'MAVEN_USERNAME', 'MAVEN_PASSWORD']
   #secretEnv: ['SRCCLR_API_TOKEN']
 
+# Checking the health of Oracle DB server
+#- name: 'gcr.io/cloud-builders/docker'
+#  entrypoint: 'bash'
+#  args: ['-c', './check_oracledb_health.sh']
+ # env: ['DB_HLTH_CHK_MAX_RETRY=7', 'DB_HLTH_CHK_SLEEP=20', 'ORACLEDB_SERVER=oracle-dbserver']
